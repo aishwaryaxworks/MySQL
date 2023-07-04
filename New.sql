@@ -369,3 +369,439 @@ VALUES
     (19, 'Shuttle Bus', 'London Shuttle Services', 'London', '+44 444555666', 'https://www.londonshuttleservices.com/', 4.2, true, true, 4000),
     (20, 'Horse Carriage', 'London Horse Carriages', 'London', '+44 111222333', 'https://www.londonhorsecarriages.com/', 4.8, false, false, 10000);
 SELECT * FROM transportation;
+
+SELECT * FROM attractions WHERE attraction_id = 7;
+
+-- UPDATE table_name SET column_name = data WHERE condition;
+UPDATE attractions SET location = "Bangalore" WHERE attraction_id = 7;
+
+-- Updating 5 columns for 10 tables
+-- Table1 - attractions
+UPDATE attractions SET attraction_name = 'The National Gallery of London', attraction_info = 'Art museum with an extensive collection of European paintings', 
+location = 'Trafalgar Square, London, UK', opening_hours = '10:00 AM - 6:00 PM' WHERE attraction_id = 8;
+
+UPDATE attractions
+SET attraction_name = 'Greenwich Observatory',
+    attraction_info = 'Observatory and historic site famous for Greenwich Mean Time',
+    location = 'Greenwich, London, UK',
+    opening_hours = '10:00 AM - 5:00 PM'
+WHERE attraction_id = 18;
+
+UPDATE attractions
+SET attraction_name = 'St. James\'s Park',
+    attraction_info = 'Beautiful park with a lake and resident pelicans',
+    location = 'Westminster, London, UK',
+    opening_hours = '6:00 AM - 10:00 PM'
+WHERE attraction_id = 10;
+
+UPDATE attractions
+SET attraction_name = 'The Tower Bridge Experience',
+    attraction_info = 'Iconic bascule bridge with a visitor experience and glass floor walkways',
+    location = 'Tower Bridge Road, London, UK',
+    opening_hours = '9:30 AM - 5:30 PM'
+WHERE attraction_id = 9;
+
+UPDATE attractions
+SET attraction_name = 'Victoria and Albert Museum',
+    attraction_info = 'Art and design museum showcasing a vast collection',
+    location = 'Cromwell Road, London, UK',
+    opening_hours = '10:00 AM - 5:45 PM'
+WHERE attraction_id = 17;
+
+-- Table2 - hotels
+UPDATE hotels
+SET hotel_name = 'The Ritz London - Luxury Hotel',
+    address = '150 Piccadilly, St. James\'s, London W1J 9BR',
+    rating = 4.9,
+    price_per_night = 550.00,
+    website = 'https://www.theritzlondon.com/'
+WHERE hotel_id = 1;
+
+UPDATE hotels
+SET hotel_name = 'The Savoy - Historic Hotel',
+    address = 'Strand, London WC2R 0EZ',
+    rating = 4.8,
+    price_per_night = 500.00,
+    website = 'https://www.thesavoylondon.com/'
+WHERE hotel_id = 2;
+
+UPDATE hotels
+SET hotel_name = 'Shangri-La Hotel at The Shard - Luxury Accommodation',
+    address = '31 St Thomas St, London SE1 9QU',
+    rating = 4.9,
+    price_per_night = 600.00,
+    website = 'https://www.shangri-la.com/london/shangrila/'
+WHERE hotel_id = 3;
+
+UPDATE hotels
+SET hotel_name = 'The Langham, London - Elegant Hotel',
+    address = '1C Portland Pl, Marylebone, London W1B 1JA',
+    rating = 4.8,
+    price_per_night = 450.00,
+    website = 'https://www.langhamhotels.com/en/the-langham/london/'
+WHERE hotel_id = 4;
+
+UPDATE hotels
+SET hotel_name = 'Four Seasons Hotel London at Park Lane',
+    address = 'Hamilton Pl, Park Ln, London W1J 7DR',
+    rating = 4.8,
+    price_per_night = 650.00,
+    website = 'https://www.fourseasons.com/parklane/'
+WHERE hotel_id = 5;
+
+-- Table3 - london_events
+UPDATE london_events
+SET event_name = 'London Walking Tour',
+    event_description = 'Explore the streets of London on a guided walking tour. Discover iconic landmarks such as Big Ben, Tower Bridge, 
+    and Buckingham Palace while learning about the city''s rich history and cultural significance. A knowledgeable guide will provide fascinating 
+    insights and stories along the way.',
+    venue = 'City of London',
+    event_date = '2023-11-01',
+    start_time = '10:00'
+WHERE event_id = 21;
+
+-- Table4 - museums
+UPDATE museums
+SET 
+    museum_name = 'British Museum',
+    address = 'Great Russell St, Bloomsbury, London WC1B 3DG',
+    museum_opening_hours = '10:00 AM - 5:30 PM',
+    admission_fee = 0,
+    website = 'https://www.britishmuseum.org/'
+WHERE museum_id = 1;
+
+UPDATE museums
+SET 
+    museum_name = 'Natural History Museum',
+    address = 'Cromwell Rd, South Kensington, London SW7 5BD',
+    museum_opening_hours = '10:00 AM - 5:50 PM',
+    admission_fee = 0,
+    website = 'https://www.nhm.ac.uk/'
+WHERE museum_id = 2;
+
+UPDATE museums
+SET 
+    museum_name = 'Science Museum',
+    address = 'Exhibition Rd, South Kensington, London SW7 2DD',
+    museum_opening_hours = '10:00 AM - 6:00 PM',
+    admission_fee = 0,
+    website = 'https://www.sciencemuseum.org.uk/'
+WHERE museum_id = 3;
+
+UPDATE museums
+SET 
+    museum_name = 'Victoria and Albert Museum',
+    address = 'Cromwell Rd, Knightsbridge, London SW7 2RL',
+    museum_opening_hours = '10:00 AM - 5:45 PM',
+    admission_fee = 0,
+    website = 'https://www.vam.ac.uk/'
+WHERE museum_id = 4;
+
+UPDATE museums
+SET 
+    museum_name = 'Tate Modern',
+    address = 'Bankside, London SE1 9TG',
+    museum_opening_hours = '10:00 AM - 6:00 PM',
+    admission_fee = 0,
+    website = 'https://www.tate.org.uk/visit/tate-modern'
+WHERE museum_id = 5;
+
+-- Table5 - parks
+UPDATE parks
+SET 
+    park_name = 'Hyde Park',
+    location = 'Westminster, London',
+    size_in_acres = 350,
+    has_playground = true,
+    has_picnic_area = true,
+    has_cycling_routes = true,
+    has_wildlife = true,
+    park_opening_hours = 'Open 24 hours',
+    website = 'https://www.royalparks.org.uk/parks/hyde-park'
+WHERE park_id = 1;
+
+UPDATE parks
+SET 
+    park_name = 'Regent\'s Park',
+    location = 'Camden, London',
+    size_in_acres = 395,
+    has_playground = true,
+    has_picnic_area = true,
+    has_cycling_routes = true,
+    has_wildlife = true,
+    park_opening_hours = 'Open 24 hours',
+    website = 'https://www.royalparks.org.uk/parks/the-regents-park'
+WHERE park_id = 2;
+
+UPDATE parks
+SET 
+    park_name = 'Richmond Park',
+    location = 'Richmond, London',
+    size_in_acres = 2360,
+    has_playground = true,
+    has_picnic_area = true,
+    has_cycling_routes = true,
+    has_wildlife = true,
+    park_opening_hours = 'Open 24 hours',
+    website = 'https://www.royalparks.org.uk/parks/richmond-park'
+WHERE park_id = 3;
+
+UPDATE parks
+SET 
+    park_name = 'Greenwich Park',
+    location = 'Greenwich, London',
+    size_in_acres = 183,
+    has_playground = true,
+    has_picnic_area = true,
+    has_cycling_routes = true,
+    has_wildlife = true,
+    park_opening_hours = 'Open 24 hours',
+    website = 'https://www.royalparks.org.uk/parks/greenwich-park'
+WHERE park_id = 4;
+
+UPDATE parks
+SET 
+    park_name = 'St. James''s Park',
+    location = 'Westminster, London',
+    size_in_acres = 57,
+    has_playground = true,
+    has_picnic_area = true,
+    has_cycling_routes = true,
+    has_wildlife = true,
+    park_opening_hours = 'Open 24 hours',
+    website = 'https://www.royalparks.org.uk/parks/st-jamess-park'
+WHERE park_id = 5;
+
+-- Table6 - restaurants
+UPDATE restaurants
+SET 
+    restaurant_name = 'Dishoom',
+    cuisine_type = 'Indian',
+    address = '12 Upper St Martin\'s Ln, Covent Garden, London WC2H 9FB',
+    city = 'London',
+    price_range = '$$',
+    has_delivery = true,
+    has_vegetarian_options = true,
+    website = 'https://www.dishoom.com/',
+    contact_number = '+44 20 7420 9324'
+WHERE restaurant_id = 1;
+
+UPDATE restaurants
+SET 
+    restaurant_name = 'Sketch',
+    cuisine_type = 'International',
+    address = '9 Conduit St, Mayfair, London W1S 2XG',
+    city = 'London',
+    price_range = '$$$',
+    has_delivery = false,
+    has_vegetarian_options = true,
+    website = 'https://sketch.london/',
+    contact_number = '+44 20 7659 4500'
+WHERE restaurant_id = 2;
+
+UPDATE restaurants
+SET 
+    restaurant_name = 'Duck & Waffle',
+    cuisine_type = 'British',
+    address = '110 Bishopsgate, London EC2N 4AY',
+    city = 'London',
+    price_range = '$$$',
+    has_delivery = true,
+    has_vegetarian_options = true,
+    website = 'https://duckandwaffle.com/',
+    contact_number = '+44 20 3640 7310'
+WHERE restaurant_id = 3;
+
+UPDATE restaurants
+SET 
+    restaurant_name = 'The Ledbury',
+    cuisine_type = 'European',
+    address = '127 Ledbury Rd, Notting Hill, London W11 2AQ',
+    city = 'London',
+    price_range = '$$$',
+    has_delivery = false,
+    has_vegetarian_options = true,
+    website = 'https://www.theledbury.com/',
+    contact_number = '+44 20 7792 9090'
+WHERE restaurant_id = 4;
+
+UPDATE restaurants
+SET 
+    restaurant_name = 'Hakkasan',
+    cuisine_type = 'Chinese',
+    address = '8 Hanway Pl, Fitzrovia, London W1T 1HD',
+    city = 'London',
+    price_range = '$$$',
+    has_delivery = true,
+    has_vegetarian_options = true,
+    website = 'https://hakkasan.com/',
+    contact_number = '+44 20 7927 7000'
+WHERE restaurant_id = 5;
+
+-- Table7 - shopping_malls
+UPDATE shopping_malls
+SET 
+    mall_name = 'Covent Garden',
+    address = 'Covent Garden, London WC2E 9DD',
+    city = 'London',
+    opening_hours = '10:00 AM - 8:00 PM',
+    has_parking = false
+WHERE mall_id = 3;
+
+-- Table8 - theatres
+UPDATE theatres
+SET 
+    theatre_name = 'The Old Vic',
+    theatre_address = 'The Cut, Lambeth, London SE1 8NB',
+    city = 'London',
+    seating_capacity = 1072,
+    website = 'https://www.oldvictheatre.com/'
+WHERE theatre_id = 1;
+
+-- Table9 - tours
+UPDATE tours
+SET 
+    tour_name = 'Thames River Cruise',
+    duration_in_hours = 2,
+    price = 25.99,
+    website = 'https://www.exampletours.com/thames-river-cruise',
+    contact_number = '+44 20 1234 5678',
+    rating = 4.4
+WHERE tour_id = 3;
+
+-- Table10 - transportation
+UPDATE transportation
+SET 
+    transport_type = 'London Underground',
+    company_name = 'Transport for London',
+    location = 'London',
+    contact_number = '+44 20 7222 1234',
+    website = 'https://tfl.gov.uk/',
+    rating = 4.9,
+    has_wifi = true,
+    has_air_conditioning = true,
+    price_per_hour = NULL
+WHERE transportation_id = 1;
+
+UPDATE transportation
+SET 
+    transport_type = 'London Black Cabs',
+    company_name = 'London Taxi Company',
+    location = 'London',
+    contact_number = '+44 20 1234 5678',
+    website = 'https://www.ltc-taxis.co.uk/',
+    rating = 4.7,
+    has_wifi = true,
+    has_air_conditioning = true,
+    price_per_hour = NULL
+WHERE transportation_id = 2;
+
+UPDATE transportation
+SET 
+    transport_type = 'London Buses',
+    company_name = 'Transport for London',
+    location = 'London',
+    contact_number = '+44 20 7222 1234',
+    website = 'https://tfl.gov.uk/',
+    rating = 4.6,
+    has_wifi = true,
+    has_air_conditioning = true,
+    price_per_hour = NULL
+WHERE transportation_id = 3;
+
+UPDATE transportation
+SET 
+    transport_type = 'London Overground',
+    company_name = 'Transport for London',
+    location = 'London',
+    contact_number = '+44 20 7222 1234',
+    website = 'https://tfl.gov.uk/',
+    rating = 4.5,
+    has_wifi = true,
+    has_air_conditioning = true,
+    price_per_hour = NULL
+WHERE transportation_id = 4;
+
+UPDATE transportation
+SET 
+    transport_type = 'London Cycle Hire',
+    company_name = 'Transport for London',
+    location = 'London',
+    contact_number = '+44 20 7222 1234',
+    website = 'https://tfl.gov.uk/',
+    rating = 4.3,
+    has_wifi = false,
+    has_air_conditioning = false,
+    price_per_hour = 2.99
+WHERE transportation_id = 5;
+
+-- Deleting data from tables
+-- Table1:
+DELETE FROM attractions WHERE attraction_id=6;
+DELETE FROM attractions WHERE attraction_id=7;
+DELETE FROM attractions WHERE attraction_id=8;
+DELETE FROM attractions WHERE attraction_id=9;
+DELETE FROM attractions WHERE attraction_id=10;
+
+-- Table2:
+DELETE FROM hotels WHERE hotel_id=6;
+DELETE FROM hotels WHERE hotel_id=7;
+DELETE FROM hotels WHERE hotel_id=8;
+DELETE FROM hotels WHERE hotel_id=9;
+DELETE FROM hotels WHERE hotel_id=10;
+
+-- Table3:
+DELETE FROM london_events WHERE event_id=6;
+DELETE FROM london_events WHERE event_id=7;
+DELETE FROM london_events WHERE event_id=8;
+DELETE FROM london_events WHERE event_id=9;
+DELETE FROM london_events WHERE event_id=10;
+
+-- Table4:
+DELETE FROM museums WHERE museum_id=6;
+DELETE FROM museums WHERE museum_id=7;
+DELETE FROM museums WHERE museum_id=8;
+DELETE FROM museums WHERE museum_id=9;
+DELETE FROM museums WHERE museum_id=10;
+
+-- Table5:
+DELETE FROM parks WHERE park_id=6;
+DELETE FROM parks WHERE park_id=7;
+DELETE FROM parks WHERE park_id=8;
+DELETE FROM parks WHERE park_id=9;
+DELETE FROM parks WHERE park_id=10;
+
+-- Table6:
+DELETE FROM restaurants WHERE restaurant_id=6;
+DELETE FROM restaurants WHERE restaurant_id=7;
+DELETE FROM restaurants WHERE restaurant_id=8;
+DELETE FROM restaurants WHERE restaurant_id=9;
+DELETE FROM restaurants WHERE restaurant_id=10;
+
+-- Table7:
+DELETE FROM shopping_malls WHERE mall_id=6;
+DELETE FROM shopping_malls WHERE mall_id=7;
+DELETE FROM shopping_malls WHERE mall_id=8;
+DELETE FROM shopping_malls WHERE mall_id=9;
+DELETE FROM shopping_malls WHERE mall_id=10;
+
+-- Table8:
+DELETE FROM theatres WHERE theatre_id=6;
+DELETE FROM theatres WHERE theatre_id=7;
+DELETE FROM theatres WHERE theatre_id=8;
+DELETE FROM theatres WHERE theatre_id=9;
+DELETE FROM theatres WHERE theatre_id=10;
+
+-- Table9:
+DELETE FROM tours WHERE tour_id=6;
+DELETE FROM tours WHERE tour_id=7;
+DELETE FROM tours WHERE tour_id=8;
+DELETE FROM tours WHERE tour_id=9;
+DELETE FROM tours WHERE tour_id=10;
+
+-- Table10:
+DELETE FROM transportation WHERE transportation_id=6;
+DELETE FROM transportation WHERE transportation_id=7;
+DELETE FROM transportation WHERE transportation_id=8;
+DELETE FROM transportation WHERE transportation_id=9;
+DELETE FROM transportation WHERE transportation_id=10;
