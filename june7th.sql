@@ -55,7 +55,16 @@ ALTER TABLE animals MODIFY COLUMN species_id VARCHAR(10);
 
 -- rename table name
 RENAME TABLE animals TO animals_info ;
-
+DROP TABLE attractions;
+DROP TABLE hotels;
+DROP TABLE restaurants;
+DROP TABLE museums;
+DROP TABLE parks;
+DROP TABLE theatres;
+DROP TABLE shoppingmalls;
+DROP TABLE tours;
+DROP TABLE events;
+DROP TABLE transportation;
 
 
 
