@@ -79,3 +79,11 @@ SELECT LPAD (blood_type,9,' group') FROM hospital_info;
 
 -- RPAD
 SELECT RPAD (blood_type,9,' group') FROM hospital_info;
+
+
+
+
+
+
+
+

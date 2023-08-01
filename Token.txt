@@ -1,0 +1,30 @@
+Token : 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
+
+	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
+	
+	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
+
+Git Link : https://github.com/aishwaryaxworks/CoreJava.git
+
+for fetching --- Clone : git clone https://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@github.com/aishwaryaxworks/CoreJava.git
+
+Syntax : git clone token@github.com/username/repository
+
+for pushing --->
+git status - for recent activities
+git add file_name --- for one file
+git add ./   ---- for uploading multiple files
+git commit -m "uploading files"   ---- to commit changes
+git push origin main    ----- push files to main branch
+
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+
+credential adding :
+
+Internet o network address --- git:https://github.com
+User name --- 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
+passowrd --- VNa!sh4697
+
+
+git remote set-url origin "ssh://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@github.com/aishwaryaxworks/CoreJava.git"
